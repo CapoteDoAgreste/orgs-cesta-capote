@@ -3,6 +3,7 @@ import { StyleSheet, View, Image } from "react-native";
 
 //General Components
 import NewText from "../../../components/NewText";
+import NewButton from "../../../components/newButton";
 
 const style = StyleSheet.create({
   cesta_view: {
@@ -43,7 +44,14 @@ const style = StyleSheet.create({
   },
 });
 
-export default function Details({ title, name, description, price, logo }) {
+export default function Details({
+  title,
+  name,
+  description,
+  price,
+  logo,
+  buttonText,
+}) {
   return (
     <>
       <View style={style.cesta_view}>
@@ -54,6 +62,7 @@ export default function Details({ title, name, description, price, logo }) {
         </View>
         <NewText style={style.description}>{description}</NewText>
         <NewText style={style.price}>{price}</NewText>
+        <NewButton text={buttonText} />
       </View>
     </>
   );

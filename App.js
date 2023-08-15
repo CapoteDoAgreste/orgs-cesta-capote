@@ -1,6 +1,6 @@
 import React from "react";
-import { StatusBar, SafeAreaView } from "react-native";
-import Cesta from "./src/pages/Cesta/Cesta";
+import { StatusBar, SafeAreaView, Image, View } from "react-native";
+import Cesta from "./src/pages/Cesta/Index";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
@@ -11,11 +11,7 @@ export default function App() {
   });
 
   if (!loadedFont) {
-    return (
-      <>
-        <AppLoading />
-      </>
-    );
+    return <AppLoading />;
   } else {
     return (
       <SafeAreaView>
