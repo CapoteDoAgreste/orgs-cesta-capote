@@ -34,6 +34,7 @@ const style = StyleSheet.create({
     color: "#A3A3A3",
     fontSize: 16,
     lineHeight: 26,
+    textAlign: "justify",
   },
   price: {
     color: "#2A9F85",

@@ -4,6 +4,8 @@ import Cesta from "./src/pages/Cesta/Index";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
+import data from "./src/mocks/data.js";
+
 export default function App() {
   const [loadedFont] = useFonts({
     Montserrat_400Regular: require("./assets/fonts/Montserrat-Regular.ttf"),
@@ -14,9 +16,9 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <StatusBar />
-        <Cesta />
+        <Cesta data={data} />
       </SafeAreaView>
     );
   }
